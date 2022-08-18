@@ -1,0 +1,448 @@
+@base <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_dataset.void.ttl> .
+@prefix ensemblterms: <http://rdf.ebi.ac.uk/terms/ensembl/> .
+@prefix :      <#> .
+@prefix bdb:   <http://vocabularies.bridgedb.org/ops#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix pav:   <http://purl.org/pav/> .
+@prefix sio:   <http://semanticscience.org/resource/> .
+@prefix ensembl: <http://rdf.ebi.ac.uk/resource/ensembl/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix eco:   <http://purl.obolibrary.org/obo/> .
+
+:homo_sapiens-ensembl-ccds-inferred_from_transcript-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with ccds for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:09.739Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-ccds Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:09.739Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_ccds.inferred_from_transcript.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSCRIPT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-wikigenes-direct-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with wikigenes for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:17.117Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-wikigenes Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:17.117Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_wikigenes.direct.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DIRECT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+<ensembl_homo_sapiens_rdf_dataset>
+        a                    dctypes:Dataset ;
+        dcterms:description  "The Ensembl project produces genome databases for vertebrates and other eukaryotic species, and makes this information freely available online." ;
+        dcterms:issued       "2014-11-02T15:43:07.433Z"^^xsd:dateTime ;
+        dcterms:license      <http://www.ensembl.org/info/about/legal/code_licence.html> ;
+        dcterms:publisher    <http://www.ensembl.org/> ;
+        dcterms:title        "Ensembl Genome Database" ;
+        pav:version          "77" ;
+        void:dataDump        <ftp://ftp.ebi.ac.uk/pub/databases/RDF/ensembl/77/homo_sapiens_77.ttl> ;
+        void:sparqlEndpoint  <http://wwwdev.ebi.ac.uk/rdf/services/ensembl/sparql> ;
+        void:subset          :homo_sapiens-ensembl-insdc-inferred_from_translation-linkset , :homo_sapiens-ensembl-wikigenes-direct-linkset , :homo_sapiens-ensembl-refseq-inferred_from_translation-linkset , :homo_sapiens-ensembl-mirbase-dependent-linkset , :homo_sapiens-ensembl-ena-embl-inferred_from_translation-linkset , :homo_sapiens-ensembl-unigene-sequence_match-linkset , :homo_sapiens-ensembl-refseq-inferred_from_transcript-linkset , :homo_sapiens-ensembl-hgnc-direct-linkset , :homo_sapiens-ensembl-pdb-inferred_from_translation-linkset , :homo_sapiens-ensembl-ccds-inferred_from_transcript-linkset , :homo_sapiens-ensembl-unigene-dependent-linkset , :homo_sapiens-ensembl-unigene-misc-linkset , :homo_sapiens-ensembl-ncbigene-direct-linkset , :homo_sapiens-ensembl-uniprot-inferred_from_translation-linkset , :homo_sapiens-ensembl-wikigenes-dependent-linkset , :homo_sapiens-ensembl-hgnc-dependent-linkset , :homo_sapiens-ensembl-unigene-direct-linkset , :homo_sapiens-ensembl-ncbigene-dependent-linkset , :homo_sapiens-ensembl-mirbase-misc-linkset ;
+        void:uriSpace        "http://rdf.ebi.ac.uk/resource/ensembl/" ;
+        dcat:landingPage     <http://www.ensembl.org/> ;
+        dcat:theme           sio:SIO_010035 .
+
+:homo_sapiens-ensembl-unigene-sequence_match-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:09.454Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:09.454Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_unigene.sequence_match.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:SEQUENCE_MATCH ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-ena-embl-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with ena.embl for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:11.133Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-ena.embl Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:11.133Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_ena.embl.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-unigene-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:08.191Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:08.191Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_unigene.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-wikigenes-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with wikigenes for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:16.907Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-wikigenes Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:16.907Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_wikigenes.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-mirbase-misc-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with mirbase for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:11.951Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-mirbase Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:11.951Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_mirbase.misc.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:MISC ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-hgnc-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with hgnc for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:17.348Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-hgnc Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:17.348Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_hgnc.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-unigene-direct-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:09.547Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:09.547Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_unigene.direct.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DIRECT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-pdb-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with pdb for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:16.609Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-pdb Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:16.609Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_pdb.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_000985 ;
+        bdb:objectsDatatype       sio:SIO_010043 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-insdc-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with insdc for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:14.032Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-insdc Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:14.032Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_insdc.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-unigene-misc-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:07.516Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:07.516Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_unigene.misc.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:MISC ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-ncbigene-direct-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with ncbigene for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:12.344Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-ncbigene Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:12.344Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_ncbigene.direct.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DIRECT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-ncbigene-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with ncbigene for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:12.173Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-ncbigene Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:12.173Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_ncbigene.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-hgnc-direct-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with hgnc for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:17.632Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-hgnc Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:17.632Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_hgnc.direct.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DIRECT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-uniprot-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with uniprot for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:18.012Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-uniprot Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:18.012Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_uniprot.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_000985 ;
+        bdb:objectsDatatype       sio:SIO_010043 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-mirbase-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with mirbase for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:11.964Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-mirbase Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:11.964Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_mirbase.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-refseq-inferred_from_transcript-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with refseq for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:12.576Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-refseq Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:12.576Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_refseq.inferred_from_transcript.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSCRIPT ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .
+
+:homo_sapiens-ensembl-refseq-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with refseq for the species homo_sapiens"@en ;
+        dcterms:issued            "2015-09-09T14:43:13.06Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-refseq Linkset for homo_sapiens"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:43:13.06Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/HomoSapiens/Ensembl_Hs_refseq.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_homo_sapiens_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_homo_sapiens_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_homo_sapiens_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_9606 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_9606 .

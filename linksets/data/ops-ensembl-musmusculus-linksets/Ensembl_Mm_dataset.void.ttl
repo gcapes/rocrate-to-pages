@@ -1,0 +1,360 @@
+@base <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_dataset.void.ttl> .
+@prefix ensemblterms: <http://rdf.ebi.ac.uk/terms/ensembl/> .
+@prefix :      <#> .
+@prefix bdb:   <http://vocabularies.bridgedb.org/ops#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix pav:   <http://purl.org/pav/> .
+@prefix sio:   <http://semanticscience.org/resource/> .
+@prefix ensembl: <http://rdf.ebi.ac.uk/resource/ensembl/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix eco:   <http://purl.obolibrary.org/obo/> .
+
+:mus_musculus-ensembl-insdc-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with insdc for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:07.429Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-insdc Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:07.429Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_insdc.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-unigene-sequence_match-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:04.47Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:04.47Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_unigene.sequence_match.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:SEQUENCE_MATCH ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-refseq-inferred_from_transcript-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with refseq for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:06.387Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-refseq Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:06.387Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_refseq.inferred_from_transcript.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSCRIPT ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-mirbase-direct-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with mirbase for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:06.177Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-mirbase Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:06.177Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_mirbase.direct.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DIRECT ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-mirbase-misc-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with mirbase for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:06.171Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-mirbase Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:06.171Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_mirbase.misc.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:MISC ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-uniprot-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with uniprot for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:08.172Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-uniprot Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:08.172Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_uniprot.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_000985 ;
+        bdb:objectsDatatype       sio:SIO_010043 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+<ensembl_mus_musculus_rdf_dataset>
+        a                    dctypes:Dataset ;
+        dcterms:description  "The Ensembl project produces genome databases for vertebrates and other eukaryotic species, and makes this information freely available online." ;
+        dcterms:issued       "2014-11-02T15:44:02.492Z"^^xsd:dateTime ;
+        dcterms:license      <http://www.ensembl.org/info/about/legal/code_licence.html> ;
+        dcterms:publisher    <http://www.ensembl.org/> ;
+        dcterms:title        "Ensembl Genome Database" ;
+        pav:version          "77" ;
+        void:dataDump        <ftp://ftp.ebi.ac.uk/pub/databases/RDF/ensembl/77/mus_musculus_77.ttl> ;
+        void:sparqlEndpoint  <http://wwwdev.ebi.ac.uk/rdf/services/ensembl/sparql> ;
+        void:subset          :mus_musculus-ensembl-ena-embl-inferred_from_translation-linkset , :mus_musculus-ensembl-mirbase-direct-linkset , :mus_musculus-ensembl-refseq-inferred_from_translation-linkset , :mus_musculus-ensembl-insdc-inferred_from_translation-linkset , :mus_musculus-ensembl-unigene-dependent-linkset , :mus_musculus-ensembl-wikigenes-dependent-linkset , :mus_musculus-ensembl-ncbigene-dependent-linkset , :mus_musculus-ensembl-unigene-misc-linkset , :mus_musculus-ensembl-mirbase-misc-linkset , :mus_musculus-ensembl-unigene-direct-linkset , :mus_musculus-ensembl-ccds-inferred_from_transcript-linkset , :mus_musculus-ensembl-refseq-inferred_from_transcript-linkset , :mus_musculus-ensembl-uniprot-inferred_from_translation-linkset , :mus_musculus-ensembl-unigene-sequence_match-linkset , :mus_musculus-ensembl-pdb-inferred_from_translation-linkset ;
+        void:uriSpace        "http://rdf.ebi.ac.uk/resource/ensembl/" ;
+        dcat:landingPage     <http://www.ensembl.org/> ;
+        dcat:theme           sio:SIO_010035 .
+
+:mus_musculus-ensembl-unigene-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:03.676Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:03.676Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_unigene.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-wikigenes-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with wikigenes for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:07.861Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-wikigenes Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:07.861Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_wikigenes.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-ena-embl-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with ena.embl for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:05.533Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-ena.embl Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:05.533Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_ena.embl.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-pdb-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with pdb for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:07.729Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-pdb Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:07.729Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_pdb.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_000985 ;
+        bdb:objectsDatatype       sio:SIO_010043 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-ncbigene-dependent-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with ncbigene for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:06.044Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-ncbigene Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:06.044Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_ncbigene.dependent.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DEPENDENT ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-ccds-inferred_from_transcript-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with ccds for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:04.812Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-ccds Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:04.812Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_ccds.inferred_from_transcript.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSCRIPT ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-unigene-direct-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:04.556Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:04.556Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_unigene.direct.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:DIRECT ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-refseq-inferred_from_translation-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with refseq for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:06.892Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-refseq Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:06.892Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_refseq.inferred_from_translation.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:INFERRED_FROM_TRANSLATION ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .
+
+:mus_musculus-ensembl-unigene-misc-linkset
+        a                         void:Linkset ;
+        dcterms:description       "A linkset which links Ensembl with unigene for the species mus_musculus"@en ;
+        dcterms:issued            "2015-09-09T14:44:02.562Z"^^xsd:dateTime ;
+        dcterms:license           <http://www.ensembl.org/info/about/legal/index.html> ;
+        dcterms:publisher         <http://www.bridgedb.org/> ;
+        dcterms:title             "Ensembl-unigene Linkset for mus_musculus"@en ;
+        pav:createdBy             <http://orcid.org/0000-0001-8624-2972> ;
+        pav:createdOn             "2015-09-09T14:44:02.562Z"^^xsd:dateTime ;
+        pav:createdWith           <https://raw.githubusercontent.com/JonathanMELIUS/EnsemblLinksetsCreator/master/src/gf/ensemblinksetscreator/script/LinkSetCreator.java> ;
+        void:dataDump             <http://bridgedb.org/data/linksets/MusMusculus/Ensembl_Mm_unigene.misc.LS.ttl> ;
+        void:inDataset            <ensembl_mus_musculus_rdf_dataset> ;
+        void:linkPredicate        ensemblterms:MISC ;
+        void:objectsTarget        <ensembl_mus_musculus_rdf_dataset> ;
+        void:subjectsTarget       <ensembl_mus_musculus_rdf_dataset> ;
+        bdb:assertionMethod       eco:ECO_0000203 ;
+        bdb:linksetJustification  sio:SIO_010035 ;
+        bdb:objectsDatatype       sio:SIO_010035 ;
+        bdb:objectsSpecies        eco:NCBITaxon_10090 ;
+        bdb:subjectsDatatype      sio:SIO_010035 ;
+        bdb:subjectsSpecies       eco:NCBITaxon_10090 .

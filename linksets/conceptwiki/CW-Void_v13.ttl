@@ -1,0 +1,672 @@
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dctype: <http://purl.org/dc/dcmitype>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix freq: <http://purl.org/cld/freq/>.
+@prefix pav: <http://purl.org/pav/>.
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix : <http://downloads.nbiceng.net/linksets/void/CW-Void_v13.ttl#>.
+
+<http://downloads.nbiceng.net/linksets/void/CW-Void_v13.ttl> dcterms:description "A Void description for the ConceptWiki"@en;
+                                                        dcterms:title "A VoID Description of the ConceptWiki"@en;
+                                                        pav:createdBy <http://www.conceptwiki.org/>;
+                                                        pav:createdOn "2013-07-12T10:49:00Z"^^xsd:dateTime;
+                                                        pav:lastUpdateOn "2014-03-27T12:00:00Z"^^xsd:dateTime;
+                                                        pav:previousVersion <http://downloads.nbiceng.net/linksets/void/CW-Void_v12.ttl> ;
+                                                        a void:DatasetDescription;
+                                                        foaf:primaryTopic :ConceptWikiDataset .
+:ConceptWikiDataset dcterms:created "2007-03-01T00:00:00Z"^^xsd:dateTime;
+                   dcterms:description "ConceptWiki's Dataset"@en;
+                   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                   dcterms:modified "2013-07-11T16:02:27Z"^^xsd:dateTime;
+                   dcterms:publisher <http://www.conceptwiki.org/>;
+                   dcterms:subject <http://dbpedia.org/resource/concept>;
+                   dcterms:title "ConceptWiki Dataset"@en;
+                   void:exampleResource <http://www.conceptwiki.org/concept/index/8e3a87ae-345d-4c25-bd7a-5b3221c6e3fa.rdf>;
+                   void:feature <http://www.w3.org/ns/formats/data/Turtle>;
+                   void:subset :ConceptWikiSwissProt, :ConceptWikiChemSpider, :ConceptWikiUMLS;
+                   void:uriSpace "http://www.conceptwiki.org/concept/"^^xsd:string;
+                   void:vocabulary <http://purl.obolibrary.org/obo/>, dctype:, dcterms:, pav:, void:, <http://www.obofoundry.org/ro/ro.owl#>, dul:, rdf:, xsd:, skos:, foaf:;
+                   a void:Dataset;
+                   foaf:homepage <http://www.conceptwiki.org/> .
+:ConceptWikiSwissProt dcterms:description "The subset of ConceptWiki that contains SwissProt data."@en;
+                   dcterms:title "ConceptWiki SwissProt Data set"@en;
+                   #this is a dynamic value
+                   pav:derivedFrom <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz>;
+				   #this is a dynamic value
+				   pav:importedOn "2012-08-02T10:23:56Z"^^xsd:dateTime;
+				   pav:importedBy <http://www.conceptwiki.org/> ;
+                   dcat:mediaType <http://www.rfc-editor.org/rfc/rfc3023.txt> ;
+                   #this is a dynamic value
+                   dcat:downloadURL <ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz> ;
+                   void:subset :SwissProtExactMatch, :PdbProteinsExactMatch, :ChemblProteinsExactMatch, :DrugBankProteinDrugExactMatch, :SwissProtGeneExactMatch;
+                   a dctypes:Dataset .
+:ConceptWikiChemSpider dcterms:description "The subset of ConceptWiki that contains ChemSpider data."@en;
+                   dcterms:title "ConceptWiki ChemSpider Data set"@en;
+                   #this is a dynamic value
+                   pav:retrievedOn "2013-12-12T10:23:56Z"^^xsd:dateTime;
+				   pav:retrievedBy <http://www.conceptwiki.org/> ;
+                   #this is a dynamic value
+                   pav:retrievedFrom <ftp://ftp.rsc-us.org/OPS/20131111/> ;
+                   void:subset :ChemSpiderExactMatch, :ChemspiderExactMatch, :ChemSpiderProteinExactMatch, :ChemblChemicalMoleculesExactMatch, :PDBLigandsExactMatch, :ChemblProteinMoleculesExactMatch, :OPSCompoundsExactMatch, :MeSHCompoundsExactMatch, :ChEBICompoundsExactMatch, :ChEBIProteinsExactMatch, :DrugBankCompoundsExactMatch; 
+                   a void:Dataset .
+:ConceptWikiUMLS dcterms:description "The subset of ConceptWiki that contains UMLS data."@en;
+                   dcterms:title "ConceptWiki UMLS Data set"@en;
+                   #this is a dynamic value
+                   pav:derivedFrom <http://download.nlm.nih.gov/umls/kss/2011AA/full/2011AA.CHK>;
+				   #this is a dynamic value
+				   pav:importedOn "2012-08-02T10:23:56Z"^^xsd:dateTime;
+				   pav:importedBy <http://www.conceptwiki.org/> ;
+				   #this is a dynamic value
+				   pav:retrievedOn "2013-07-20T10:23:56Z"^^xsd:dateTime;
+				   pav:retrievedBy <http://www.conceptwiki.org/> ;
+                   #this is a dynamic value
+                   pav:retrievedFrom <http://download.nlm.nih.gov/umls/kss/2011AA/full/2011AA.CHK> ;
+                   void:subset :MeshProteinExactMatch, :GOExactMatch, :MeshGeneExactMatch, :MeshDiseaseExactMatch, :MeshMixedSemanticTypesExactMatch;
+                   a void:Dataset .  
+:ConceptWikiWikiPathways dcterms:description "The subset of ConceptWiki that contains WikiPathways data."@en;
+                   dcterms:title "ConceptWiki WikiPathways Data set"@en;
+				   #this is a dynamic value
+				   pav:retrievedOn "2013-07-20T10:23:56Z"^^xsd:dateTime;
+				   pav:retrievedBy <http://www.conceptwiki.org/> ;
+                   pav:retrievedFrom <http://rdf.wikipathways.org> ;
+                   void:subset :WikiPathwaysExactMatch;
+                   a void:Dataset .    
+:ConceptWikiPathwayOntology dcterms:description "The subset of ConceptWiki that contains Pathway Ontology data."@en;
+                   dcterms:title "ConceptWiki Pathway Ontology Data set"@en;
+                   #this is a dynamic value
+                   pav:derivedFrom <ftp://rgd.mcw.edu/pub/ontology/pathway/pathway_20130620.obo>;
+				   #this is a dynamic value
+				   pav:importedOn "2012-08-02T10:23:56Z"^^xsd:dateTime;
+				   pav:importedBy <http://www.conceptwiki.org/> ;
+				   #this is a dynamic value
+				   pav:retrievedOn "2013-07-20T10:23:56Z"^^xsd:dateTime;
+				   pav:retrievedBy <http://www.conceptwiki.org/> ;
+                   #this is a dynamic value
+                   pav:retrievedFrom <ftp://rgd.mcw.edu/pub/ontology/pathway/pathway_20130620.obo> ;
+                   a void:Dataset .
+:ConceptWikiEnzyme a dctypes:Dataset ;
+	dcterms:title "ConceptWiki Enzyme Data set"@en ;
+	dcterms:description "The subset of ConceptWiki that contains Enzyme data"@en ;
+	pav:derrivedFrom <ftp://ftp.expasy.org/databases/enzyme/enzyme.dat> ;
+	pav:importedOn "2013-12-01T12:00:00Z"^^xsd:dateTime ;
+	pav:importedBy <http://www.conceptwiki.org/> ;
+	dcterms:format <http://enzyme.expasy.org/enzuser.txt> ;
+	dcat:downloadURL <ftp://ftp.expasy.org/databases/enzyme/enzyme.dat> ;
+	void:subset :EnzymeExactMatch .
+
+:SwissProtExactMatch dcterms:description "Swiss-Prot-ConceptWiki ID linkset of concepts imported into ConceptWiki."@en;
+                  	dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                  	dcterms:title "ConceptWiki Swiss-Prot Exact Match Linkset"@en;
+            		#this is a dynamic value
+            		pav:authoredBy <https://wiki.nbic.nl/index.php/User:Kees>;
+              		#this is a dynamic value
+              		pav:authoredOn "2012-09-13T12:16:00Z"^^xsd:dateTime;
+              		#this is a dynamic value
+              		pav:createdBy <https://wiki.nbic.nl/index.php/User:Kees>;
+              		#this is a dynamic value
+              		pav:createdOn "2012-09-13T16:02:27Z"^^xsd:dateTime;
+                  	pav:createdWith <http://ops.conceptwiki.org/>;
+                  	#this is a dynamic value
+                  	pav:previousVersion <http://downloads.nbiceng.net/conceptwiki/linksets/archive/swissprot_somepreviousversion>;
+              		void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.uniprot.org-protein.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.uniprot.org-protein.ttl>;
+              		void:uriSpace "http://www.uniprot.org/uniprot"^^xsd:string, "http://purl.uniprot.org/"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiSwissProt;
+				  	#this is a dynamic value
+				  	void:objectsTarget  <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_06_void.ttl>;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.
+:SwissProtGeneExactMatch dcterms:description "Swiss-Prot-ConceptWiki ID linkset of gene concepts imported into ConceptWiki."@en;
+                  	dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                  	dcterms:title "ConceptWiki Swiss-Prot Genes Exact Match Linkset"@en;
+            		#this is a dynamic value
+            		pav:authoredBy <https://wiki.nbic.nl/index.php/User:Kees>;
+              		#this is a dynamic value
+              		pav:authoredOn "2012-09-13T12:16:00Z"^^xsd:dateTime;
+              		#this is a dynamic value
+              		pav:createdBy <https://wiki.nbic.nl/index.php/User:Kees>;
+              		#this is a dynamic value
+              		pav:createdOn "2012-09-13T16:02:27Z"^^xsd:dateTime;
+                  	pav:createdWith <http://ops.conceptwiki.org/>;
+                  	#this is a dynamic value
+                  	pav:previousVersion <http://downloads.nbiceng.net/conceptwiki/linksets/archive/swissprot_somepreviousversion>;
+					void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.uniprot.org-protein.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.uniprot.org-gene.ttl>;
+              		void:uriSpace "http://www.uniprot.org/uniprot"^^xsd:string, "http://purl.uniprot.org/"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiSwissProt;
+				  	#this is a dynamic value
+				  	void:objectsTarget  <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_06_void.ttl>;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_010035>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.
+:PdbProteinsExactMatch dcterms:description "Swiss-Prot PDB data-ConceptWiki ID linkset of concepts imported into ConceptWiki."@en;
+                  	dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                  	dcterms:title "ConceptWiki Swiss-Prot PDB Exact Match Linkset"@en;
+            		#this is a dynamic value
+            		pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+              		#this is a dynamic value
+              		pav:authoredOn "2012-09-13T12:16:00Z"^^xsd:dateTime;
+              		#this is a dynamic value
+              		pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+              		#this is a dynamic value
+              		pav:createdOn "2012-09-13T16:02:27Z"^^xsd:dateTime;
+					pav:createdWith <http://www.conceptwiki.org/>;
+                  	#this is a dynamic value
+                  	pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_6>;
+            		void:uriSpace "http://www.pdb.org/pdb/explore/explore.do?pdbId="^^xsd:string;
+              		void:linkPredicate skos:exactMatch;
+              		dul:expresses <http://edamontology.org/data_1460>;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.pdb.org-protein.ttl>;
+              		void:subjectsTarget :ConceptWikiSwissProt;
+				  	#this is a dynamic value
+				  	void:objectsTarget <https://github.com/openphacts/ops-platform-setup/blob/master/void/uniprot/uniprot_2013_06_void.ttl>;
+ 					a void:Linkset. 
+:DrugBankProteinDrugExactMatch dcterms:description "Swiss-ProtID mapped DrugBank data-ConceptWiki ID linkset."@en;
+                  	dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                  	dcterms:title "ConceptWiki DrugBank proteins Exact Match Linkset"@en;
+            		#this is a dynamic value
+            		pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+              		#this is a dynamic value
+              		pav:authoredOn "2012-09-13T12:16:00Z"^^xsd:dateTime;
+              		#this is a dynamic value
+              		pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+              		#this is a dynamic value
+              		pav:createdOn "2012-09-13T16:02:27Z"^^xsd:dateTime;
+					pav:createdWith <http://www.conceptwiki.org/>;
+                  	#this is a dynamic value
+                  	pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+					void:uriSpace "http://www4.wiwiss.fu-berlin.de/drugbank/resource/targets/"^^xsd:string, "http://drugbank.ca/drugs/"^^xsd:string;
+              		void:linkPredicate skos:exactMatch;
+              		dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/drugbank.ca-protein.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www4.wiwiss.fu-berlin.de-protein.ttl>;
+              		void:subjectsTarget :ConceptWikiSwissProt;
+				  	#this is a dynamic value
+				  	void:objectsTarget <ftp://ftp.rsc-us.org/OPS_TEST/20130904/void_2013-09-04.ttl#openphacts-drugbank>;
+ 				  	#this is a dynamic value
+  					a void:Linkset. 
+:ChemblProteinsExactMatch dcterms:description "Swiss-Prot mapped to Chembl data (via chem2bio2rdf)-ConceptWiki ID linkset."@en;
+                  	dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                  	dcterms:title "ConceptWiki Chembl proteins Exact Match Linkset"@en;
+            		#this is a dynamic value
+            		pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+              		#this is a dynamic value
+              		pav:authoredOn "2012-09-13T12:16:00Z"^^xsd:dateTime;
+              		#this is a dynamic value
+              		pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+              		#this is a dynamic value
+              		pav:createdOn "2012-09-13T16:02:27Z"^^xsd:dateTime;
+					pav:createdWith <http://www.conceptwiki.org/>;
+                  	#this is a dynamic value
+                  	pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+ 					void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/chem2bio2rdf.org-protein.ttl>;
+              		void:uriSpace "http://chem2bio2rdf.org/chembl/resource/chembl_targets/"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiSwissProt;
+				  	#this is a dynamic value
+				  	void:objectsTarget  <chem2bio2rdf void>;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.
+:ChemSpiderExactMatch dcterms:description "ChemSpider ID ConceptWiki ID linkset of compounds imported into ConceptWiki."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki ChemSpider Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     #this is a dynamic value
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+                     #this is a dynamic value
+                     void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.chemspider.com-compound.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/rdf.chemspider.com-compound.ttl>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://rdf.chemspider.com"^^xsd:string, "http://www.chemspider.com"^^xsd:string;
+                     #this is a dynamic value
+                     void:objectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     void:subjectsTarget :ConceptWikiChemSpider;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset.
+:ChemspiderExactMatch dcterms:description "ChemSpider ID ConceptWiki ID linkset of compounds imported into ConceptWiki."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki ChemSpider Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     #this is a dynamic value
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+                     #this is a dynamic value
+                     void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.chemspider.com-compound.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/rdf.chemspider.com-compound.ttl>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://rdf.chemspider.com"^^xsd:string, "http://www.chemspider.com"^^xsd:string;
+                     #this is a dynamic value
+                     void:objectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     void:subjectsTarget :ConceptWikiChemSpider;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset.
+:ChemSpiderProteinExactMatch dcterms:description "ChemSpider ID ConceptWiki ID linkset of peptides, amino acids, or proteins (that are found in CS) imported into ConceptWiki."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki ChemSpider Protein Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     #this is a dynamic value
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+                     #this is a dynamic value
+                     void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.chemspider.com-protein.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/rdf.chemspider.com-protein.ttl>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://rdf.chemspider.com"^^xsd:string, "http://www.chemspider.com"^^xsd:string;
+                     #this is a dynamic value
+                     void:objectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     void:subjectsTarget :ConceptWikiChemSpider;
+                     dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+                     a void:Linkset.
+:ChemblChemicalMoleculesExactMatch  dcterms:description "Chembl Compounds ID (using CS data files) to ConceptWiki ID linkset."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki Chembl Compounds Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     #this is a dynamic value
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+                     #this is a dynamic value
+                     void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/rdf.ebi.ac.uk-compound.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/data.kasabi.com-compound.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.ebi.ac.uk-compound.ttl>;
+                     void:uriSpace "http://rdf.ebi.ac.uk/resource/chembl/molecule/"^^xsd:string, "http://data.kasabi.com/dataset/chembl-rdf/chemblid"^^xsd:string, "https://www.ebi.ac.uk/chembldb/index.php/compound/inspect/"^^xsd:string;
+                     void:linkPredicate skos:exactMatch;
+                     void:subjectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:objectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset.
+:ChemblProteinMoleculesExactMatch dcterms:description "Chembl chemical compounds that are also peptides, amino acids or proteins mapped to ConceptWiki ID linkset."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki Chembl proteins treated as chemcials Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     #this is a dynamic value
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;  
+                 	 #this is a dynamic value
+                 	 void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/rdf.ebi.ac.uk-protein.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.ebi.ac.uk-protein.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/data.kasabi.com-protein.ttl>;
+                 	 void:uriSpace "http://rdf.ebi.ac.uk/resource/chembl/molecule/"^^xsd:string, "https://www.ebi.ac.uk/chembldb/index.php/compound/inspect/"^^xsd:string, "http://data.kasabi.com/dataset/chembl-rdf/chemblid/"^^xsd:string;
+                 	 void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+                     a void:Linkset.
+:PDBLigandsExactMatch  dcterms:description "PDB Ligands as annotated by ChemSpider matched ID to ConceptWiki ID linkset."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki PDB Ligands Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:Leon>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_3>;
+                     #this is a dynamic value
+                     void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.pdb.org-compound.ttl/>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.uniprot.org-compound.ttl/>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://www.pdb.org/pdb/ligand/ligandsummary.do?hetId="^^xsd:string, "http://purl.uniprot.org/pdb/"^^xsd:string; # http://purl.uniprot.org/pdb/ is non-functional 
+                     void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset.   
+:DrugBankCompoundsExactMatch   dcterms:description "Drugbank chemicals as annotated by ChemSpider matched ID to ConceptWiki ID linkset."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki Drugbank compounds Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_3>;
+ 					 #this is a dynamic value
+ 					 void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.drugbank.ca-compound.ttl/, >, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www4.wiwiss.fu-berlin.de-compound.ttl/>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://drugbank.ca/drugs/"^^xsd:string, "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs"^^xsd:string;
+                     void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset.  
+:OCRSCompoundsExactMatch dcterms:description "OCRS chemicals ID mapped by ChemSpider to ChemSpider ID to ConceptWiki ID linkset."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki OCRS compounds Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+					 #this is a dynamic value
+					 void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/ops.rsc-us.org-compound.ttl/>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://ops.rsc-us.org/"^^xsd:string;
+                     void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset. 
+:OCRSProteinsExactMatch dcterms:description "OCRS ID mapped by ChemSpider that are amino acids, peptides, or proteins as well as classified as chemicals mapped to ConceptWiki ID linkset."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki OCRS proteins Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>; 
+                     #this is a dynamic value
+                     void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/ops.rsc-us.org-protein.ttl/>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://ops.rsc-us.org/"^^xsd:string;
+                     void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+                     a void:Linkset.
+:MeSHCompoundsExactMatch dcterms:description "Mesh chemicals annotated to ChemSpider IDs mapped to ConceptWiki ID linkset."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki Mesh compounds Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+					 #this is a dynamic value
+					 void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.bioontology.org-compound.ttl/>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://purl.bioontology.org"^^xsd:string;
+                     void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset. 
+:ChEBICompoundsExactMatch  dcterms:description "Chebi chemicals annotated to ChemSpider IDs mapped to ConceptWiki ID."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki Chebi compounds Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     #this is a dynamic value
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+					 #this is a dynamic value
+					 void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.obolibrary.org-compound.ttl/>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://purl.obolibrary.org/obo/CHEBI_"^^xsd:string;
+                     void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010004>;
+                     a void:Linkset.           
+:ChEBIProteinsExactMatch dcterms:description "Chebi amino acids, peptides, or proteins annotated to ChemSpider IDs (chemicals) mapped to ConceptWiki ID."@en;
+                     dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+                     dcterms:title "ConceptWiki Chebi proteins Exact Match Linkset"@en;
+                     #this is a dynamic value
+                     pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                     #this is a dynamic value
+                     pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                     #this is a dynamic value
+                     pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                     pav:createdWith <http://www.conceptwiki.org/>;
+                     #this is a dynamic value
+                     pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+					 #this is a dynamic value
+					 void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.obolibrary.org-proteins.ttl/>;
+                     void:linkPredicate skos:exactMatch;
+                     void:uriSpace "http://purl.obolibrary.org/obo/CHEBI_"^^xsd:string;
+                     void:objectsTarget :ConceptWikiChemSpider ;
+                     #this is a dynamic value
+                     void:subjectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+                     #this is a dynamic value
+                     dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+                     a void:Linkset.  
+:MeshProteinExactMatch  dcterms:description "Mesh amino acids, peptides, or proteins mapped to ConceptWiki."@en;
+                    dcterms:title "ConceptWiki Mesh protein Data set"@en;
+                    #this is a dynamic value
+                    pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                    #this is a dynamic value
+                    pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                    pav:createdWith <http://www.conceptwiki.org/>;
+                    #this is a dynamic value
+                    pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+					void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.bioontology.org-protein.ttl>;
+              		void:uriSpace "http://purl.bioontology.org/ontology"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiUMLS;
+				  	#this is a dynamic value
+				  	#void:objectsTarget  umls.void;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_010043>;
+ 				  	#this is a dynamic value
+  					a void:Linkset.
+:MeshGeneExactMatch	dcterms:description "Mesh genes or genome concepts mapped to ConceptWiki."@en;
+                    dcterms:title "ConceptWiki Mesh gene Data set"@en;
+                    #this is a dynamic value
+                    pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                    #this is a dynamic value
+                    pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                    pav:createdWith <http://www.conceptwiki.org/>;
+                    #this is a dynamic value
+                    pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+					void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.bioontology.org-gene.ttl>;
+              		void:uriSpace "http://purl.bioontology.org/ontology/"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiUMLS;
+				  	#this is a dynamic value
+				  	#void:objectsTarget  umls.void;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_010035>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.	
+:MeshDiseaseExactMatch dcterms:description "Mesh disease or syndrome concepts mapped to ConceptWiki."@en;
+                    dcterms:title "ConceptWiki Mesh disease Data set"@en;
+                    #this is a dynamic value
+                    pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                    #this is a dynamic value
+                    pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                    pav:createdWith <http://www.conceptwiki.org/>;
+                    #this is a dynamic value
+                    pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+ 					void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.bioontology.org-disease.ttl>;
+              		void:uriSpace "http://purl.bioontology.org/ontology/"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiUMLS;
+				  	#this is a dynamic value
+				  	#void:objectsTarget  umls.void;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_010299>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.		
+:MeshMixedSemanticTypesExactMatch dcterms:description "Mesh mixed semantic type concepts mapped to ConceptWiki. Contains remaining Mesh data that did not fit in already defined linksets."@en;
+                    dcterms:title "ConceptWiki Mesh mixed semantic type Data set"@en;
+                    #this is a dynamic value
+                    pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                    #this is a dynamic value
+                    pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                    pav:createdWith <http://www.conceptwiki.org/>;
+                    pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+ 					void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.bioontology.org-rest.ttl>;
+              		void:uriSpace "http://purl.bioontology.org/ontology/"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiUMLS;
+				  	#this is a dynamic value
+				  	#void:objectsTarget  umls.void;
+ 				  	dul:expresses <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Accession_Number>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.	
+:GOExactMatch dcterms:description "GO concepts mapped to ConceptWiki."@en;
+                    dcterms:title "ConceptWiki GO Data set"@en;
+                    #this is a dynamic value
+                    pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                    #this is a dynamic value
+                    pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                    pav:createdWith <http://www.conceptwiki.org/>;
+                    #this is a dynamic value
+                    pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+              		void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.org-rest.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.org-protein.ttl>;
+              		void:uriSpace "http://purl.org/obo/owl/GO#"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiSwissProt;
+				  	#this is a dynamic value
+				  	#void:objectsTarget  umls.void;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_001166>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.	
+:WikiPathwaysExactMatch dcterms:description "WikiPathways concepts mapped to ConceptWiki."@en;
+                    dcterms:title "ConceptWiki WP Data set"@en;
+                    #this is a dynamic value
+                    pav:authoredBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                    #this is a dynamic value
+                    pav:createdBy <https://wiki.nbic.nl/index.php/User:David>;
+                    #this is a dynamic value
+                    pav:createdOn "2013-01-17T16:02:27Z"^^xsd:dateTime;
+                    pav:createdWith <http://www.conceptwiki.org/>;
+                    #this is a dynamic value
+                    pav:previousVersion <http://downloads.nbiceng.net/linksets/mapping_20120824_?>;
+					void:linkPredicate skos:exactMatch;
+              		#this is a dynamic value
+              		void:dataDump <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/www.wikipathways.org-rest.ttl>, <http://downloads.nbiceng.net/linksets/20130903-linksets.tgz/purl.org-protein.ttl>;
+              		void:uriSpace "http://www.wikipathways.org/instance/"^^xsd:string;
+              		void:subjectsTarget :ConceptWikiWikiPathways;
+				  	#this is a dynamic value
+				  	void:objectsTarget  <https://github.com/openphacts/ops-platform-setup/blob/master/void/wikipathways/wikipathways_void.ttl>;
+ 				  	dul:expresses <http://semanticscience.org/resource/SIO_001107>;
+ 				  	#this is a dynamic value
+ 					a void:Linkset.
+
+:EnzymeExactMatch a void:Linkset ;
+	dcterms:description "Enzyme - ConceptWiki linkset"@en ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+	dcterms:title "ConceptWiki Enzyme Exact Match Linkset"@en ;
+	pav:authoredBy <https://wiki.nbic.nl/index.php/User:Kees> ;
+	pav:authoredOn "2014-01-28T12:00:00Z"^^xsd:dateTime ;
+	pav:createdBy <https://wiki.nbic.nl/index.php/User:Kees> ;
+	pav:createdOn "2014-01-28T12:00:00Z"^^xsd:dateTime ;
+	pav:createdWith <http://www.conceptwiki.org/> ;
+	# no previous version available
+	# pav:previousVersion <> ;
+	void:linkPredicate skos:exactMatch ;
+	void:dataDump <http://downloads.nbiceng.net/linksets/linksets-2014-01-06/> ;
+	void:uriSpace "http://enzyme.expasy.org/EC/"^^xsd:string ;
+	void:subjectsTarget :ConceptWikiEnzyme ;
+	void:objectsTarget <> ;
+	dul:expresses <http://semanticscience.org/resource/SIO_010343> ;
+	void:triples 2705 .
+
+# small description of the HMDB set of chemspider
+:HmdbExactMatch dcterms:description "HMDB concepts imported by Chemspider mapped to ConceptWiki concepts."@en ;
+    dcterms:license <http://creativecommons.org/licenses/by/3.0/>;
+    pav:authoredBy <https://wiki.nbic.nl/index.php/User:Kees>;
+    pav:authoredOn "2013-11-11T00:00:00Z"^^xsd:dateTime;
+    pav:createdBy <https://wiki.nbic.nl/index.php/User:Kees>;
+    pav:createdOn "2014-03-27T12:00:00Z"^^xsd:dateTime;
+    pav:createdWith <http://www.conceptwiki.org/>;
+    void:objectsTarget <http://rdf.chemspider.com/void#openphactsDataset>;
+    void:subjectsTarget :ConceptWikiChemSpider;
+    void:linkPredicate skos:exactMatch ;
+    dul:expresses <HmdbExactMatch> ;
+    a void:Linkset .
