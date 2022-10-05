@@ -13,5 +13,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC \
 RUN npm install ro-crate-html-js
 ENV PATH "/node_modules/.bin:$PATH"
 
-## Create directory for output
-RUN mkdir /tmp/output
+## Copy code file from repo to Docker filesystem
+COPY entrypoint.sh /entrypoint.sh
+
+## Code to run when the docker container starts
+ENTRYPOINT ["/entrypoint.sh"]
