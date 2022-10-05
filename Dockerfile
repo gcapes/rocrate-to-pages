@@ -1,14 +1,17 @@
-# If you need Python 3 and the GitHub CLI, then use:
-FROM node:18.2.0-slim
+# syntax=docker/dockerfile:1.4.2
 
-RUN apt-get update && \
-    apt-get -y install rsync
+FROM ubuntu:20.04
 
-#copy over neccesary files to docker image
-COPY public /public
-COPY src /src
-COPY package-lock.json /package-lock.json
-COPY package.json /package.json
-COPY entrypoint.sh /entrypoint.sh
+## Install requirements
 
-ENTRYPOINT ["/entrypoint.sh"]
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC \
+                      apt-get install -y \
+                                      nodejs \
+                                      npm
+
+## Install ro-crate-html-js
+RUN npm install ro-crate-html-js
+ENV PATH "/node_modules/.bin:$PATH"
+
+## Create directory for output
+RUN mkdir /tmp/output
