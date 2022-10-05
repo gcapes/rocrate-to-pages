@@ -1,13 +1,13 @@
 name: 'rocrate-to-html'
-description: 'This takes the rocrate json and preview.html files and publishes them on github pages'
-branding:
-  icon: 'upload-cloud'
-  color: 'red'
+description: 'This creates a preview html file from the rocrate json metadata file and publishes them on github pages'
 inputs:
-  crate_path:  
-    description: 'Path to rocrate files'
+  crate_path:
+    description: 'Path to ro-crate-metadata.json'
     required: false
     default: '.'
+outputs:
+  preview:
+    description: 'HTML preview of the RO Crate'
 runs:
   using: 'docker'
   image: 'Dockerfile'
