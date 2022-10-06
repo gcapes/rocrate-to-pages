@@ -5,19 +5,18 @@ on:
       - test  # Set a branch name to trigger deployment
   pull_request:
 jobs:
-  build-html:
+  build-and-deploy:
     runs-on: ubuntu-20.04
+    concurrency: ci-${{github.ref}}
     steps:
-      # Checkout this repo
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Build the preview.html file from the rocrate.json
-      - name: Build Preview HTML
+      - name: Build RO Crate Preview
         uses: ./ # Uses an action in the root directory
 
-      - name: deploy
-        uses: maxheld83/ghpages@v0.3.0
-        env:
-          BUILD_DIR: .
-          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
+          branch: gh-pages
