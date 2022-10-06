@@ -15,3 +15,10 @@ jobs:
       # Build the preview.html file from the rocrate.json
       - name: Build Preview HTML
         uses: ./ # Uses an action in the root directory
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: maxheld83/ghpages@v0.3.0
+        env:
+          BUILD_DIR: .
+          GH_PAT: ${{ secrets.GH_PAT }}
