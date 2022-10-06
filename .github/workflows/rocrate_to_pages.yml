@@ -16,8 +16,8 @@ jobs:
       - name: Build Preview HTML
         uses: ./ # Uses an action in the root directory
 
-      -name: deploy
-       uses: maxheld83/ghpages@v0.3.0
-       env:
-         BUILD_DIR: .
-         GH_PAT: ${{ secrets.GH_PAT }}
+      - name: deploy
+        uses: maxheld83/ghpages@v0.3.0
+        env:
+          BUILD_DIR: .
+          GH_PAT: ${{ secrets.GH_PAT }}
