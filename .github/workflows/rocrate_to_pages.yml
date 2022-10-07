@@ -2,7 +2,7 @@ name: RoCrate to GitHub Pages
 on:
   push:
     branches:
-      - test  # Set a branch name to trigger deployment
+      - test
   pull_request:
 jobs:
   build-and-deploy:
