@@ -1,5 +1,5 @@
 name: 'rocrate-to-html'
-description: 'This creates a preview html file from the rocrate json metadata file and publishes them on github pages'
+description: 'This creates a preview html file from the rocrate json metadata file'
 inputs:
   crate_path:
     description: 'Path to ro-crate-metadata.json'
